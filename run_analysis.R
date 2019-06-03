@@ -52,3 +52,4 @@ average_data <- mean_std_data %>%
 
 write.table(average_data, file="average_data", row.names = F)
 
+
