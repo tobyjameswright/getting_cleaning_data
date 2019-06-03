@@ -46,10 +46,12 @@ names(mean_std_data) <- gsub("std()", "standard_deviation", names(mean_std_data)
 
 library(dplyr)
 
+#group by Activity and Subject and then return mean of each
+
 average_data <- mean_std_data %>%
         group_by(Activity,Subject) %>%
         summarise_each(mean)
 
-write.table(average_data, file="average_data", row.names = F)
+write.table(average_data, file="average_data.txt", row.names = F)
 
 
