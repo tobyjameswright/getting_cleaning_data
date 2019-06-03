@@ -52,6 +52,8 @@ average_data <- mean_std_data %>%
         group_by(Activity,Subject) %>%
         summarise_each(mean)
 
+#write a txt file with the summarised data
+
 write.table(average_data, file="average_data.txt", row.names = F)
 
 
